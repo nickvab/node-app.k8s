@@ -24,9 +24,9 @@ data:
       - name: 'telegram-alert'
         telegram_configs:
         - send_resolved: true
-          bot_token: 6214508459:AAG-qpiicKgmp8d6wfGbQ325WM3eREGPk58
+          bot_token: $$$$$$$$$$:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
           api_url: "https://api.telegram.org"
-          chat_id: -869666449
+          chat_id: -$$$$$$$$$$$
           parse_mode: HTML
       
 ---
