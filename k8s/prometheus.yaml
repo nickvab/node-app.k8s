@@ -43,19 +43,18 @@ metadata:
 data:
   prometheus.rules: |-
     groups:
-    - name: devopscube demo alert
+    - name: demo alerts
       rules:
-      - alert: The number of requests per minute > 100
-        expr: sum(rate(http_request_duration_seconds_count[1m])) * 60 > 100
+      - alert: The number of requests with code 404 > 100
+        expr: sum(rate(http_request_duration_seconds_count{job="node-app", method="GET", path=~"/.*", status_code="404"}[1m])) * 60 > 100
         for: 1m
         labels:
-          severity: warning
+          severity: "warning"
         annotations:
-          title: The number of requests per minute 
-          summary: The number of requests per minute > 100
+          description: " Instance has more than 100 requests per minutes with code 404."
       - alert: InstanceDown
         expr: up == 0
-        for: 1m
+        for: 10s
         labels:
           severity: "critical"
         annotations:

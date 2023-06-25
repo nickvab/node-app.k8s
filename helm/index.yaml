@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  node-app:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-06-25T13:35:45.74936703+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 7190d7050c75d54b3a6b9e926fb3b9f305285556e502c4de47294625d6ce8f37
+    name: node-app
+    type: application
+    urls:
+    - https://nickvab.github.io/node-app.k8s/helm-releases/node-app-0.4.0.tgz
+    version: 0.4.0
+generated: "2023-06-25T13:35:45.745637947+03:00"
